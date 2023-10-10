@@ -6,7 +6,7 @@
 
 `MÓDULO` Terceiro Módulo
 
-Chatbot desenvolvido em Python para um trabalho do curso Técnico em Informática no Grau Técnico. O site pertence à empresa fictícia Lumus, que mantém o antivírus Pé de Pano e o distribue para corporações. A empresa pretende usar o chatbot para tratar as dúvidas e reclamações dos clientes a respeito do *software*.
+Chatbot desenvolvido em Python em conjunto com a API do ChatGPT para um trabalho do curso Técnico em Informática no Grau Técnico. O site pertence à empresa fictícia Lumus, que mantém o antivírus Pé de Pano e o distribue para corporações. A empresa pretende usar o chatbot para tratar as dúvidas e reclamações dos clientes a respeito do *software*.
 
 ## Integrantes
 
