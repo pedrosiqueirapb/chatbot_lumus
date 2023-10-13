@@ -1,4 +1,4 @@
-# Chatbot
+# ChatBot
 
 `CURSO` Técnico em Informática
 
