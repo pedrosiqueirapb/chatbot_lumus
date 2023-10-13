@@ -2,7 +2,7 @@ from colorama import Fore, Style, init
 import openai
 
 # chave da API
-openai.api_key = "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"
+openai.api_key = "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"
 
 # iniciando a biblioteca colorama para adicionar cores às saídas no terminal
 init(autoreset=True)
@@ -11,7 +11,7 @@ init(autoreset=True)
 mensagens = [
     {
         "role": "system", # mensagem do sistema
-        "content": "Você é um ChatBot de uma empresa chamada Lumus. A empresa possui um antivírus chamado Pé de Pano que recebe algumas reclamações e dúvidas das organizações que adquiriram o software." # instrução de como o ChatGPT deve se comportar
+        "content": "Você é um ChatBot de uma empresa chamada Lumus. A empresa possui um antivírus chamado Pé de Pano que recebe algumas reclamações e dúvidas das organizações que adquiriram o software. Se possível, não dê respostas extensas." # instrução de como o ChatGPT deve se comportar
      }
 ]
 
