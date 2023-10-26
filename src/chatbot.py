@@ -1,11 +1,5 @@
-import openai
-from colorama import Fore, Style, init
-
-# chave da API
-openai.api_key = "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"
-
-# iniciando a biblioteca colorama para adicionar cores às saídas no terminal
-init(autoreset=True)
+from chave_api import openai
+from colorama_config import Fore, Style, init
 
 # a lista "mensagens" registra e mantém o histórico das conversas entre o usuário e o ChatBot, a fim de construir um contexto e fornecer respostas relevantes com base na conversa
 mensagens = [
