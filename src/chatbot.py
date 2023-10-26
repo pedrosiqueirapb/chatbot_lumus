@@ -1,8 +1,5 @@
+from chave_api import openai
 from colorama import Fore, Style, init
-import openai
-
-# chave da API
-openai.api_key = "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"
 
 # iniciando a biblioteca colorama para adicionar cores às saídas no terminal
 init(autoreset=True)
