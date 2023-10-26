@@ -24,7 +24,7 @@ while True:
 
             # se o usuário não digitou nada
             if not msg:
-                print("Erro! Digite algo...")
+                print("Erro! Você precisa digitar algo...")
             else:
                 break # se digitou, pare de pedir para que ele digite novamente
     except KeyboardInterrupt:
