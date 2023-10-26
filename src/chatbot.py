@@ -2,7 +2,7 @@ from colorama import Fore, Style, init
 import openai
 
 # chave da API
-openai.api_key = "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"
+openai.api_key = "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"
 
 # iniciando a biblioteca colorama para adicionar cores às saídas no terminal
 init(autoreset=True)
@@ -17,24 +17,38 @@ mensagens = [
 
 # a conversa é um loop infinito
 while True:
-    # capturando a mensagem do usuário
-    msg = input("\n{}Você:\n".format(Fore.GREEN))
+    try:
+        while True:
+            # capturando a mensagem do usuário
+            msg = input("\n{}Você:\n".format(Fore.CYAN))
 
-    # se o usuário digitou algo
-    if msg:
-        # adicionando o contexto da conversa na lista "mensagens"
-        mensagens.append(
-            {
-                "role": "user", # mensagem do usuário
-                "content": msg # conteúdo da mensagem
-            },
-        )
-        # solicitando a API a gerar uma resposta do modelo GPT-3.5-turbo com base nas conversas fornecidas na lista "mensagens"
-        gpt = openai.ChatCompletion.create(
-            model = "gpt-3.5-turbo",
-            messages = mensagens, temperature=0.5 # 0.5 gera respostas mais coerentes
-        )
-    
+            # se o usuário não digitou nada
+            if not msg:
+                print("Erro! Digite algo...")
+            else:
+                break # se digitou, pare de pedir para que ele digite novamente
+    except KeyboardInterrupt:
+        # tratamento para interrupção de teclado
+        print("\nChat encerrado.")
+        break # encerra o chat
+    except Exception:
+        # tratamento para uma interrupção inesperada
+        print("Ocorreu um erro inesperado!")
+        break # encerra o chat
+
+    # adicionando o contexto da conversa na lista "mensagens"
+    mensagens.append(
+        {
+            "role": "user", # mensagem do usuário
+            "content": msg # conteúdo da mensagem
+        },
+    )
+    # solicitando a API a gerar uma resposta do modelo GPT-3.5-turbo com base nas conversas fornecidas na lista "mensagens"
+    gpt = openai.ChatCompletion.create(
+        model = "gpt-3.5-turbo",
+        messages = mensagens, temperature=0.5 # 0.5 gera respostas mais coerentes
+    )
+
     # capturando a resposta do ChatGPT
     resposta = gpt.choices[0].message.content
 
