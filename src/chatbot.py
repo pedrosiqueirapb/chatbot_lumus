@@ -1,5 +1,8 @@
-from chave_api import openai
+import openai
 from colorama import Fore, Style, init
+
+# chave da API
+openai.api_key = "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"
 
 # iniciando a biblioteca colorama para adicionar cores às saídas no terminal
 init(autoreset=True)
@@ -50,7 +53,7 @@ while True:
     resposta = gpt.choices[0].message.content
 
     # printando a resposta
-    print("\n{}ChatBot:\n{}".format(Fore.MAGENTA, resposta))
+    print("\n{}Assistente Marianna:\n{}".format(Fore.MAGENTA, resposta))
     
     # adicionando o contexto da conversa na lista "mensagens"
     mensagens.append(
