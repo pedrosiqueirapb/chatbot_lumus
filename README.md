@@ -16,6 +16,6 @@ ChatBot desenvolvido em Python em conjunto com a API do ChatGPT para um trabalho
 * Vitória Cristina Simões da Silva
 * Webert Gonçalves Guimarães 
 
-## Orientador
+## Orientadora
 
 * Marianna Rossi Machado
